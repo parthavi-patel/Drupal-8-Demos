@@ -1,0 +1,4 @@
+services:
+    custdrupal_service.cow:
+        class: Drupal\custdrupal_service\CowService
+        arguments: ['@current_user']

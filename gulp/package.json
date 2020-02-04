@@ -1,0 +1,28 @@
+{
+  "name": "parthavi-gulp",
+  "version": "1.0.0",
+  "description": "Gulp dependencies for Parthavi Drupal theme",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parthavi-patel/drupal8.git"
+  },
+  "author": "Patel Parthavi",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "3.0.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglifyjs": "^0.6.2",
+    "imagemin-pngquant": "^4.2.0"
+  },
+  "dependencies": {
+    "livereload": "^0.9.0"
+  }
+}
