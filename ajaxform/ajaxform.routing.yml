@@ -1,7 +1,0 @@
-ajaxform.form:
- path: '/ajax/ajaxform'
- defaults:
-   _title: 'Application form'
-   _form: '\Drupal\ajaxform\Form\AjaxForm'
- requirements:
-   _permission: 'access content'

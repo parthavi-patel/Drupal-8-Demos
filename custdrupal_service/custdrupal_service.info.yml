@@ -1,4 +1,0 @@
-name: Example of Drupal Service
-type: module
-description: An example module of service.
-core: 8.x

@@ -1,5 +1,0 @@
-name: Ajax Form
-description: A Ajax Form to get User Details.
-core: 8.x
-package: Custom
-type: module
