@@ -1,0 +1,20 @@
+{# {%
+  set classes = [
+    'red',
+    'green',
+    'blue',
+  ]
+%}
+<div{{ attributes.addClass('my-class') }}>Test1</div>
+<div{{ attributes.addClass(classes) }}>Test2</div>
+<div{{ attributes.addClass(classes).removeClass('green') }}>Test3</div>
+<div{{ attributes.setAttribute('id', 'myID') }}>Test4</div>
+<div{{ attributes.removeAttribute('id') }}>Test5</div> #}
+<div id="cust-twig-demo">
+  	<div id="cust-twig">
+		<div>
+			<h2>Render Custom Module Form in twig file.</h2><br/><br/>
+			{{ form_in_twig }}
+		</div>
+	</div>
+</div>

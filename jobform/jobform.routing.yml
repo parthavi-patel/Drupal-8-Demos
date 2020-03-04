@@ -1,0 +1,14 @@
+jobform.manageform:
+  path: '/jobform/manageform'
+  defaults:
+    _title: 'Job form'
+    _form: '\Drupal\jobform\Form\JobForm'
+  requirements:
+    _permission: 'access content'
+jobform.manage:
+  path: '/jobform/manage'
+  defaults:
+    _controller: '\Drupal\jobform\Controller\JobFormController::manageAction'
+    _title: 'Manage Form'
+  requirements:
+    _permission: 'access content'

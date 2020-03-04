@@ -1,0 +1,5 @@
+name: Job Form
+description: A Job Form to get User Details.
+core: 8.x
+package: Custom
+type: module
