@@ -1,0 +1,5 @@
+name: WebForm data in Custom Table
+description: Saving Multistel WebForm data in Custom Table.
+core: 8.x
+package: Custom
+type: module

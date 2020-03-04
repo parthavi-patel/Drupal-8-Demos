@@ -1,0 +1,28 @@
+<?php
+
+function formtable_form_alter(&$form, $form_state, $form_id){
+  //echo "<pre>"; print_r($form['#form_id']); die;
+  if($form['#form_id'] == "webform_submission_multistep_form_add_form"){
+    $form['actions']['submit']['#submit'][] = 'webform_submission_multistep_form_add_form';
+  }
+}
+function webform_submission_multistep_form_add_form(&$form, $form_state) {
+   $field=$form_state->getValues();
+    $name=$field['name'];
+    //$preferred_contact_method_=$field['preferred_contact_method_'];
+    $email=$field['email'];
+    $phone=$field['phone'];
+    $details=$field['details'];
+    $field  = array(
+              'name'   =>  $name,
+              //'preferred_contact_method_' =>  $preferred_contact_method_,
+              'email' =>  $email,
+              'phone' => $phone,
+              'details' => $details,
+          );
+           $query = \Drupal::database();
+           $query ->insert('formtable')
+               ->fields($field)
+               ->execute();
+           drupal_set_message("succesfully saved");
+}
