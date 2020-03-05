@@ -1,0 +1,37 @@
+<?php 
+/*function demo_preprocess ( &$variables, $hook ) {
+	echo "<pre>";
+	var_dump($hook);
+	echo "</pre>";
+	if ( $hook == 'commerce_order_total_summary') {
+		kint( $variables['totals'] );
+		//echo $variables['totals']['total']; die;
+		$data = $variables['totals']['total'] - $variables['totals']['adjustments'][0]['amount'];
+		$variables['totals']['total'] = $data - $variables['totals']['adjustments'][1]['amount'];
+	}
+}*/
+
+
+function demo_preprocess( &$variables, $hook ) {
+	/*if ( $hook == 'menu' ) {
+		foreach ($variables['items'] as &$item ) {
+			$item['title'] = $item['title'] . '   ' . ' ( hook_preprocess Test ) ';
+		}
+	}*/
+}
+
+function demo_preprocess_menu( &$variables, $hook ) {
+	foreach ($variables['items'] as &$item ) {
+		$item['title'] = $item['title'] . '   ' . ' ( Test ) ';
+	}
+}
+
+
+function demo_preprocess_views_view_fields( &$variables ) {
+	kint($variables);
+	$variables['hash'] = '';
+	if ( !empty( $variables['fields']['title']->content ) ) {
+		$variables['hash'] = hash( 'ripemd160', strip_tags($variables['fields']['title']->content->__tostring()));
+	}
+}
+
