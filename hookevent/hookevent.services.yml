@@ -1,0 +1,5 @@
+services:
+  hookevent.event_subscriber_example:
+    class: Drupal\hookevent\EventSubscriber\ExampleEventSubScriber
+    tags:
+      - { name: 'event_subscriber' }

@@ -1,0 +1,7 @@
+name: Drupal 8 Hook Event
+description: Events instead of hooks
+type: module
+core: 8.x
+package: Custom
+# dependencies:
+#   - drupal:hook_event_dispatcher
